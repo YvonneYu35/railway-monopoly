@@ -1,0 +1,77 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    text-align: center;
+    padding: 20px;
+}
+
+h1 {
+    color: #333;
+}
+
+.spinner-wrapper {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.spinner-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.spinner {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10px;
+    border: 5px solid;
+    overflow: hidden;
+}
+
+.spinner .segment {
+    position: absolute;
+    width: 50%;
+    height: 50%;
+    top: 0;
+    left: 50%;
+    transform-origin: 0 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(255, 255, 255, 0.7); /* 半透明背景 */
+    border-left: 1px solid #000; /* 分隔線 */
+    border-top: 1px solid #000;
+}
+
+.spinner .segment:nth-child(1) { transform: rotate(0deg); }
+.spinner .segment:nth-child(2) { transform: rotate(72deg); }
+.spinner .segment:nth-child(3) { transform: rotate(144deg); }
+.spinner .segment:nth-child(4) { transform: rotate(216deg); }
+.spinner .segment:nth-child(5) { transform: rotate(288deg); }
+
+#spinner-fate {
+    border-color: orange;
+    background-color: #ffdd99;
+}
+
+#spinner-chance {
+    border-color: green;
+    background-color: #99ff99;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+@keyframes spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}

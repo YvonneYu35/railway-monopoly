@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>鐵路大富翁</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>鐵路大富翁</h1>
+    <div class="spinner-wrapper">
+        <div class="spinner-container">
+            <div class="spinner" id="spinner-fate">
+                <div class="segment">命運1</div>
+                <div class="segment">命運2</div>
+                <div class="segment">命運3</div>
+                <div class="segment">命運4</div>
+                <div class="segment">命運5</div>
+            </div>
+            <button onclick="spinFate()">抽取</button>
+        </div>
+        <div class="spinner-container">
+            <div class="spinner" id="spinner-chance">
+                <div class="segment">前往下兩站(此站不停)</div>
+                <div class="segment">下一站前往當前縣市車站</div>
+                <div class="segment">機會3</div>
+                <div class="segment">機會4</div>
+                <div class="segment">機會5</div>
+            </div>
+            <button onclick="spinChance()">抽取</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
